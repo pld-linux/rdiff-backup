@@ -34,7 +34,7 @@ from the previous backup will be transmitted.
 rdiff-backup jest skryptem napisanym w Pythonie, s³u¿±cym do robienia
 kopii zapasowych. Pomy¶lany zosta³ w taki sposób, aby dzia³aæ
 okresowo - na przyk³ad w nocy, poprzez crona. Katalog docelowy po
-zakoñczeniu dzia³ania skryptu zawiera kopie katalogu ¼ród³owego, ale
+zakoñczeniu dzia³ania skryptu zawiera kopiê katalogu ¼ród³owego, ale
 dodatkowo w katalogu docelowym przechowywane s± informacje o zmienianych
 plikach. Umo¿liwia to odzyzskanie plików sprzed jakiego¶ czasu. Ide±
 dzia³ania skryptu jest po³±czenie funkcjonalno¶ci mirrorowania oraz
