@@ -9,6 +9,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.stanford.edu/~bescoto/rdiff-backup/%{name}-%{version}.tar.gz
+# Source0-md5:	9e2538ccaf263424cef15f33e136d101
 URL:		http://www.stanford.edu/~bescoto/rdiff-backup/
 BuildRequires:	librsync-devel
 BuildRequires:	python-devel >= 2.2.1
