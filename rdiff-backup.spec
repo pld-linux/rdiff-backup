@@ -5,10 +5,6 @@ Version:	0.3.3
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Group(de):	Netzwerkwesen/Werkzeuge
-Group(es):	Red/Utilitarios
-Group(pl):	Sieciowe/Narzêdzia
-Group(pt_BR):	Rede/Utilitários
 Source0:	%{name}-%{version}.tar.gz
 #Requires:	librsync
 Requires:	python >= 2.2
