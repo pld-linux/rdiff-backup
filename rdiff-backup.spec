@@ -12,6 +12,7 @@ Source0:	http://rdiff-backup.stanford.edu/%{name}-%{version}.tar.gz
 # Source0-md5:	90c1b4e25afd60dbfd972a9db9a42ae9
 URL:		http://rdiff-backup.stanford.edu/
 BuildRequires:	librsync-devel >= 0.9.6
+BuildRequires:	popt-devel
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 Requires:	python >= 2.2
