@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG README FAQ.html
+%doc CHANGELOG README FAQ.html examples.html
 %attr(755,root,root) %{_bindir}/rdiff-backup
 %{_mandir}/man1/rdiff-backup.1*
 %dir %{py_sitedir}/rdiff_backup
