@@ -11,7 +11,6 @@ URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-pylibacl
 Requires:	python-pyxattr
