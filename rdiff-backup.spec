@@ -4,12 +4,12 @@
 Summary:	backup software
 Summary(pl):	Oprogramowanie do robienia kopii zapasowej
 Name:		rdiff-backup
-Version:	0.11.4
+Version:	0.11.5
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://rdiff-backup.stanford.edu/%{name}-%{version}.tar.gz
-# Source0-md5:	34449747671bf4814f098c624ca7228c
+# Source0-md5:	8a4a4956c5a9dc4cf733538352b87fe8
 URL:		http://rdiff-backup.stanford.edu/
 BuildRequires:	librsync-devel
 BuildRequires:	python-devel >= 2.2.1
