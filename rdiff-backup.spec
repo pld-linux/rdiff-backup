@@ -25,7 +25,7 @@ source directory, but extra reverse diffs are stored in the target
 directory, so you can still recover files lost some time ago. The idea
 is to combine the best features of a mirror and an incremental backup.
 rdiff-backup can also operate in a bandwidth efficient manner over a
-pipe, like rsync. Thus you can use rdiff-backup and ssh to securely
+pipe, like rsync. Thus you can use rdiff-backup and SSH to securely
 back a hard drive up to a remote location, and only the differences
 from the previous backup will be transmitted.
 
@@ -39,7 +39,7 @@ zmianach, co umo¿liwia odzyskanie plików sprzed jakiego¶ czasu. Ide±
 dzia³ania skryptu jest po³±czenie funkcjonalno¶ci mirrorowania oraz
 przyrostowych kopii zapasowych. rdiff-backup potrafi równie¿ byæ
 przyjaznym dla ³±cza umo¿liwiaj±c backup przez sieæ z wykorzystaniem
-bezpiecznego po³±czenia ssh, gdzie jedynymi przesy³anymi danymi bêd±
+bezpiecznego po³±czenia SSH, gdzie jedynymi przesy³anymi danymi bêd±
 ró¿nice w stosunku do poprzedniej kopii zapasowej.
 
 %prep
