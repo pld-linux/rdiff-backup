@@ -31,7 +31,17 @@ back a hard drive up to a remote location, and only the differences
 from the previous backup will be transmitted.
 
 %description -l pl
-Mirrorowanie plików przy przechowywaniu przyrostowych zmian.
+rdiff-backup jest skryptem napisanym w Pythonie, s³u¿±cym do robienia
+kopii zapasowych. Pomy¶lany zosta³ w taki sposób, aby dzia³aæ
+okresowo - na przyk³ad w nocy, poprzez crona. Katalog docelowy po
+zakoñczeniu dzia³ania skryptu zawiera kopie katalogu ¼ród³owego, ale
+dodatkowo w katalogu docelowym przechowywane s± informacje o zmienianych
+plikach. Umo¿liwia to odzyzskanie plików sprzed jakiego¶ czasu. Ide±
+dzia³ania skryptu jest po³±czenie funkcjonalno¶ci mirrorowania oraz
+przyrostowych kopii zapasowych. rdiff-backup potrafi równie¿ byæ przyjaznym
+dla ³±cza umo¿liwiaj±c backup przez sieæ z wykorzystaniem bezpiecznego
+po³±czenia ssh, gdzie jedynymi przesy³anymi danymi bêd± ró¿nice
+z poprzedniego backupa.
 
 %prep
 %setup -q
