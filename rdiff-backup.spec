@@ -11,7 +11,7 @@ Requires:	python >= 2.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%description 
+%description
 rdiff-backup - Mirror files while keeping incremental changes.
 
 %description -l pl
