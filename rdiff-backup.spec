@@ -6,7 +6,9 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
+Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
+Group(pt_BR):	Rede/Utilitários
 Source0:	%{name}-%{version}.tar.gz
 #Requires:	librsync
 Requires:	python >= 2.2
@@ -14,20 +16,20 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description 
-rdiff-backup -- Mirror files while keeping incremental changes
+rdiff-backup - Mirror files while keeping incremental changes.
+
+%description -l pl
+Mirrorowanie plików przy przechowywaniu przyrostowych zmian.
 
 %prep
 %setup -q
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-cp rdiff-backup		$RPM_BUILD_ROOT%{_bindir}
-cp rdiff-backup.1	$RPM_BUILD_ROOT%{_mandir}/man1
+install rdiff-backup	$RPM_BUILD_ROOT%{_bindir}
+install rdiff-backup.1	$RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf CHANGELOG README
 
@@ -38,4 +40,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz FAQ.html
 %attr(755,root,root) %{_bindir}/rdiff-backup
-%{_mandir}/man1/rdiff-backup.1.gz
+%{_mandir}/man1/rdiff-backup.1*
