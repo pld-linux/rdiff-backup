@@ -4,7 +4,7 @@
 Summary:	backup software
 Summary(pl):	Oprogramowanie do robienia kopii zapasowej
 Name:		rdiff-backup
-Version:	0.11.2
+Version:	0.11.4
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
