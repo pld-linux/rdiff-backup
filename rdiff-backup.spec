@@ -1,4 +1,3 @@
-%include        /usr/lib/rpm/macros.python
 Summary:	Backup software
 Summary(pl):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
