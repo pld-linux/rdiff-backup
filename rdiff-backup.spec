@@ -10,6 +10,7 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	http://rdiff-backup.stanford.edu/%{name}-%{version}.tar.gz
 # Source0-md5:	ad3e2f0a7014d47c69fd01d8d114f282
+Patch0:		%{name}-python23.patch
 URL:		http://rdiff-backup.stanford.edu/
 BuildRequires:	librsync-devel
 BuildRequires:	python-devel >= 2.2.1
@@ -35,6 +36,7 @@ Mirrorowanie plików przy przechowywaniu przyrostowych zmian.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 python setup.py build
