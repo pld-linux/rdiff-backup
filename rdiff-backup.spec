@@ -9,7 +9,7 @@ Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
 Source0:	%{name}-%{version}.tar.gz
 #Requires:	librsync
-Requires:	Python >= 2.2
+Requires:	python >= 2.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
