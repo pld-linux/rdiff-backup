@@ -1,4 +1,3 @@
-
 %include        /usr/lib/rpm/macros.python
 
 Summary:	backup software
@@ -42,7 +41,9 @@ python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-python setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
+python setup.py install \
+	--optimize=2 \
+	--root=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
