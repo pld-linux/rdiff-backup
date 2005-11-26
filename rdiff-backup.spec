@@ -1,12 +1,12 @@
 Summary:	Backup software
 Summary(pl):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://savannah.nongnu.org/download/rdiff-backup/%{name}-%{version}.tar.gz
-# Source0-md5:	7cd3aac2e0bdff476ea73ba3ac23ec82
+# Source0-md5:	dedae55157ec11d046ffd79bd48db25c
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
@@ -30,12 +30,12 @@ from the previous backup will be transmitted.
 
 %description -l pl
 rdiff-backup jest skryptem napisanym w Pythonie, s³u¿±cym do robienia
-kopii zapasowych. Pomy¶lany zosta³ w taki sposób, aby dzia³aæ
-okresowo - na przyk³ad w nocy, poprzez crona. Katalog docelowy po
-zakoñczeniu dzia³ania skryptu zawiera kopiê katalogu ¼ród³owego, ale
-dodatkowo w katalogu docelowym przechowywane s± dodatkowe informacje o
-zmianach, co umo¿liwia odzyskanie plików sprzed jakiego¶ czasu. Ide±
-dzia³ania skryptu jest po³±czenie funkcjonalno¶ci mirrorowania oraz
+kopii zapasowych. Pomy¶lany zosta³ w taki sposób, aby dzia³aæ okresowo
+- na przyk³ad w nocy, poprzez crona. Katalog docelowy po zakoñczeniu
+dzia³ania skryptu zawiera kopiê katalogu ¼ród³owego, ale dodatkowo w
+katalogu docelowym przechowywane s± dodatkowe informacje o zmianach,
+co umo¿liwia odzyskanie plików sprzed jakiego¶ czasu. Ide± dzia³ania
+skryptu jest po³±czenie funkcjonalno¶ci mirrorowania oraz
 przyrostowych kopii zapasowych. rdiff-backup potrafi równie¿ byæ
 przyjaznym dla ³±cza umo¿liwiaj±c backup przez sieæ z wykorzystaniem
 bezpiecznego po³±czenia SSH, gdzie jedynymi przesy³anymi danymi bêd±
