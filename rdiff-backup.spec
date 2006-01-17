@@ -1,12 +1,12 @@
 Summary:	Backup software
 Summary(pl):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://savannah.nongnu.org/download/rdiff-backup/%{name}-%{version}.tar.gz
-# Source0-md5:	dedae55157ec11d046ffd79bd48db25c
+# Source0-md5:	756b38aaf2602d097cafd08996fb7887
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
