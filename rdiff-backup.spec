@@ -1,5 +1,5 @@
 Summary:	Backup software
-Summary(pl):	Oprogramowanie do robienia kopii zapasowych
+Summary(pl.UTF-8):   Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.0.4
 Release:	1
@@ -28,18 +28,18 @@ pipe, like rsync. Thus you can use rdiff-backup and SSH to securely
 back a hard drive up to a remote location, and only the differences
 from the previous backup will be transmitted.
 
-%description -l pl
-rdiff-backup jest skryptem napisanym w Pythonie, s³u¿±cym do robienia
-kopii zapasowych. Pomy¶lany zosta³ w taki sposób, aby dzia³aæ okresowo
-- na przyk³ad w nocy, poprzez crona. Katalog docelowy po zakoñczeniu
-dzia³ania skryptu zawiera kopiê katalogu ¼ród³owego, ale dodatkowo w
-katalogu docelowym przechowywane s± dodatkowe informacje o zmianach,
-co umo¿liwia odzyskanie plików sprzed jakiego¶ czasu. Ide± dzia³ania
-skryptu jest po³±czenie funkcjonalno¶ci mirrorowania oraz
-przyrostowych kopii zapasowych. rdiff-backup potrafi równie¿ byæ
-przyjaznym dla ³±cza umo¿liwiaj±c backup przez sieæ z wykorzystaniem
-bezpiecznego po³±czenia SSH, gdzie jedynymi przesy³anymi danymi bêd±
-ró¿nice w stosunku do poprzedniej kopii zapasowej.
+%description -l pl.UTF-8
+rdiff-backup jest skryptem napisanym w Pythonie, sÅ‚uÅ¼Ä…cym do robienia
+kopii zapasowych. PomyÅ›lany zostaÅ‚ w taki sposÃ³b, aby dziaÅ‚aÄ‡ okresowo
+- na przykÅ‚ad w nocy, poprzez crona. Katalog docelowy po zakoÅ„czeniu
+dziaÅ‚ania skryptu zawiera kopiÄ™ katalogu ÅºrÃ³dÅ‚owego, ale dodatkowo w
+katalogu docelowym przechowywane sÄ… dodatkowe informacje o zmianach,
+co umoÅ¼liwia odzyskanie plikÃ³w sprzed jakiegoÅ› czasu. IdeÄ… dziaÅ‚ania
+skryptu jest poÅ‚Ä…czenie funkcjonalnoÅ›ci mirrorowania oraz
+przyrostowych kopii zapasowych. rdiff-backup potrafi rÃ³wnieÅ¼ byÄ‡
+przyjaznym dla Å‚Ä…cza umoÅ¼liwiajÄ…c backup przez sieÄ‡ z wykorzystaniem
+bezpiecznego poÅ‚Ä…czenia SSH, gdzie jedynymi przesyÅ‚anymi danymi bÄ™dÄ…
+rÃ³Å¼nice w stosunku do poprzedniej kopii zapasowej.
 
 %prep
 %setup -q
