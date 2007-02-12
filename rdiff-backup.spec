@@ -1,5 +1,5 @@
 Summary:	Backup software
-Summary(pl.UTF-8):   Oprogramowanie do robienia kopii zapasowych
+Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.0.4
 Release:	1
