@@ -10,7 +10,7 @@ Source0:	http://savannah.nongnu.org/download/rdiff-backup/%{name}-%{version}.tar
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
-BuildRequires:	python-devel >= 2.5
+BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-pylibacl
