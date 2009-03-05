@@ -1,4 +1,5 @@
 Summary:	Backup software
+Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.2.7
@@ -28,6 +29,17 @@ rdiff-backup can also operate in a bandwidth efficient manner over a
 pipe, like rsync. Thus you can use rdiff-backup and SSH to securely
 back a hard drive up to a remote location, and only the differences
 from the previous backup will be transmitted.
+
+%description -l hu.UTF-8
+rdiff-backup egy Python-ban írt szkript, amely egy könyvtárról csinál
+biztonsági másolatot egy másik könyvtárba és futtatható periódikusan
+is (pl. éjszakánként cron-ból). A célkönyvtárban a forráskönyvtár
+másolata jelenik meg, de extra visszafejthető különbségeket is tárol,
+így vissza tudod állítani a rég elvesztett fájlokat. Az ötlet a
+mirror-ozás és a növekményées backup legjobb tulajdonságainak
+kombinálása. Az rdiff-backup képes SSH-val is együttműködni, hogy a
+meghajtót egy távoli helyre backup-olja, és csak a különbségeket
+küldje el.
 
 %description -l pl.UTF-8
 rdiff-backup jest skryptem napisanym w Pythonie, służącym do robienia
