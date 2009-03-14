@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.2.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://download.savannah.gnu.org/releases-noredirect/rdiff-backup/%{name}-%{version}.tar.gz
