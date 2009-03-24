@@ -2,12 +2,12 @@ Summary:	Backup software
 Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
-Version:	1.3.2
+Version:	1.3.3
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://download.savannah.gnu.org/releases-noredirect/rdiff-backup/%{name}-%{version}.tar.gz
-# Source0-md5:	384a9ffbc24cf8ee9de4cf3e0e63b3c4
+# Source0-md5:	e3ec506c01e12b693adb79751daa7c63
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
