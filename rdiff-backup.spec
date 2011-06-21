@@ -3,11 +3,12 @@ Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.2.8
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://download.savannah.gnu.org/releases-noredirect/rdiff-backup/%{name}-%{version}.tar.gz
 # Source0-md5:	1a94dc537fcf74d6a3a80bd27808e77b
+Source1:	bash-completion.sh
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
@@ -54,6 +55,14 @@ przyjaznym dla łącza umożliwiając backup przez sieć z wykorzystaniem
 bezpiecznego połączenia SSH, gdzie jedynymi przesyłanymi danymi będą
 różnice w stosunku do poprzedniej kopii zapasowej.
 
+%package -n bash-completion-rdiff-backup
+Summary:	This package provides bash-completion for rdiff-backup
+Group:		Applications/Shells
+Requires:	bash-completion
+
+%description -n bash-completion-rdiff-backup
+This package provides bash-completion for rdiff-backup.
+
 %prep
 %setup -q
 
@@ -66,6 +75,11 @@ rm -rf $RPM_BUILD_ROOT
 python setup.py install \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT/%{_datadir}/bash-completion
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/bash_completion.d
+install %{SOURCE1} $RPM_BUILD_ROOT/%{_datadir}/bash-completion/%{name}
+ln -s ../../%{_datadir}/bash-completion/%{name} $RPM_BUILD_ROOT%{_sysconfdir}/bash_completion.d
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,3 +95,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/rdiff_backup
 %{py_sitedir}/rdiff_backup/*.py[co]
 %attr(755,root,root) %{py_sitedir}/rdiff_backup/*.so
+
+%files -n bash-completion-rdiff-backup
+%defattr(644,root,root,755)
+%{_datadir}/bash-completion/%{name}
+%{_sysconfdir}/bash_completion.d/%{name}
