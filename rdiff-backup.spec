@@ -3,14 +3,14 @@ Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.2.8
-Release:	3
+Release:	4
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://download.savannah.gnu.org/releases-noredirect/rdiff-backup/%{name}-%{version}.tar.gz
 # Source0-md5:	1a94dc537fcf74d6a3a80bd27808e77b
 Source1:	bash-completion.sh
 URL:		http://www.nongnu.org/rdiff-backup/
-BuildRequires:	librsync-devel >= 0.9.6
+BuildRequires:	librsync-devel >= 0.9.7-5
 BuildRequires:	popt-devel
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
