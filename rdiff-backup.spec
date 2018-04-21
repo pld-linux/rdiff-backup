@@ -3,11 +3,13 @@ Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
 Version:	1.2.8
-Release:	5
+Release:	6
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://download.savannah.gnu.org/releases-noredirect/rdiff-backup/%{name}-%{version}.tar.gz
 # Source0-md5:	1a94dc537fcf74d6a3a80bd27808e77b
+Patch0:		librsync.patch
+Patch1:		hardlinks.patch
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.7-5
 BuildRequires:	popt-devel
@@ -56,16 +58,16 @@ różnice w stosunku do poprzedniej kopii zapasowej.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 

@@ -1,0 +1,18 @@
+diff -Nur rdiff-backup-1.2.8.orig/rdiff_backup/backup.py rdiff-backup-1.2.8/rdiff_backup/backup.py
+--- rdiff-backup-1.2.8.orig/rdiff_backup/backup.py	2009-03-16 08:36:21.000000000 -0600
++++ rdiff-backup-1.2.8/rdiff_backup/backup.py	2017-01-08 10:29:55.417206386 -0700
+@@ -555,8 +555,12 @@
+ 			elif result == 2: return 1 # SpecialFile
+ 		elif not self.patch_diff_to_temp(basis_rp, diff_rorp, new):
+ 			return 0
+-		if new.lstat() and not diff_rorp.isflaglinked():
+-			rpath.copy_attribs(diff_rorp, new)
++                if new.lstat():
++                        if diff_rorp.isflaglinked():
++                                if Globals.eas_write:
++                                        new.data['ea'] = diff_rorp.get_ea()
++                        else:
++                                rpath.copy_attribs(diff_rorp, new)
+ 		return self.matches_cached_rorp(diff_rorp, new)
+ 
+ 	def patch_hardlink_to_temp(self, diff_rorp, new):
