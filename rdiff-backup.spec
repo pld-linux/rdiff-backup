@@ -2,22 +2,21 @@ Summary:	Backup software
 Summary(hu.UTF-8):	Backup szoftver
 Summary(pl.UTF-8):	Oprogramowanie do robienia kopii zapasowych
 Name:		rdiff-backup
-Version:	1.2.8
-Release:	6
+Version:	2.2.6
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://download.savannah.gnu.org/releases-noredirect/rdiff-backup/%{name}-%{version}.tar.gz
-# Source0-md5:	1a94dc537fcf74d6a3a80bd27808e77b
-Patch0:		librsync.patch
-Patch1:		hardlinks.patch
+Source0:	https://files.pythonhosted.org/packages/source/r/rdiff-backup/%{name}-%{version}.tar.gz
+# Source0-md5:	cc055b501f004c1828664755ae039c28
 URL:		http://www.nongnu.org/rdiff-backup/
 BuildRequires:	librsync-devel >= 0.9.7-5
 BuildRequires:	popt-devel
-BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python3-devel >= 1:3.6
+BuildRequires:	python3-setuptools_scm
 BuildRequires:	rpm-pythonprov
-%pyrequires_eq	python-modules
-Requires:	python-pylibacl
-Requires:	python-pyxattr >= 0.4.0
+%pyrequires_eq	python3-modules
+Requires:	python3-pylibacl
+Requires:	python3-pyxattr >= 0.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,34 +55,53 @@ przyjaznym dla łącza umożliwiając backup przez sieć z wykorzystaniem
 bezpiecznego połączenia SSH, gdzie jedynymi przesyłanymi danymi będą
 różnice w stosunku do poprzedniej kopii zapasowej.
 
+%package -n bash-completion-rdiff-backup
+Summary:	bash-completion for rdiff-backup commands
+Summary(pl.UTF-8):	Bashowe uzupełnianie poleceń rdiff-backup
+Group:		Applications/Shells
+Requires:	bash-completion >= 2.0
+Requires:	%{name} = %{version}-%{release}
+BuildArch:	noarch
+
+%description -n bash-completion-rdiff-backup
+bash-completion for rdiff-backup commands.
+
+%description -n bash-completion-rdiff-backup -l pl.UTF-8
+Bashowe uzupełnianie poleceń rdiff-backup.
+
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
-%py_build
+%py3_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%py_install
+%py3_install
 
-%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
-
-%py_postclean
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG README FAQ.html examples.html
+%doc CHANGELOG.adoc README.adoc docs/FAQ.adoc docs/examples.adoc
 %attr(755,root,root) %{_bindir}/rdiff-backup
+%attr(755,root,root) %{_bindir}/rdiff-backup-delete
 %attr(755,root,root) %{_bindir}/rdiff-backup-statistics
 %{_mandir}/man1/rdiff-backup.1*
 %{_mandir}/man1/rdiff-backup-statistics.1*
-%{py_sitedir}/rdiff_backup*.egg-info
-%dir %{py_sitedir}/rdiff_backup
-%{py_sitedir}/rdiff_backup/*.py[co]
-%attr(755,root,root) %{py_sitedir}/rdiff_backup/*.so
+%{py3_sitedir}/rdiff_backup*.egg-info
+%dir %{py3_sitedir}/rdiff_backup
+%{py3_sitedir}/rdiff_backup/__pycache__
+%{py3_sitedir}/rdiff_backup/*.py
+%attr(755,root,root) %{py3_sitedir}/rdiff_backup/*.so
+%{py3_sitedir}/rdiffbackup
+%{_mandir}/man1/rdiff-backup-delete.1*
+%{_mandir}/man1/rdiff-backup-old.1*
+
+%files -n bash-completion-rdiff-backup
+%defattr(644,root,root,755)
+%{bash_compdir}/rdiff-backup
